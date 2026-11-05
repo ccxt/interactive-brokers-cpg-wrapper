@@ -1,7 +1,8 @@
 # Interactive Brokers Client Portal Gateway
 
-This is a dockerized IBKR CP Gateway - when you build the image, the original gateway is automatically downloaded from https://download2.interactivebrokers.com/portal/clientportal.gw.zip.
+You need to [intall Docker](https://docs.docker.com/engine/install/) at first to use this repository, as this is a dockerized IBKR CP Gateway.
 
+When you build the image, the original gateway is automatically downloaded from https://download2.interactivebrokers.com/portal/clientportal.gw.zip, so this repository itsef does not contain any IBKR files to ensure safety.
 
 ## Usage
 
