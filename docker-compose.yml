@@ -1,0 +1,14 @@
+services:
+  ibkr-gateway:
+    build: .
+    image: ibkr-client-portal-gateway:latest
+    container_name: ibkr-gateway
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./logs:/app/logs
+      # Uncomment to override the gateway configuration without rebuilding:
+      # - ./config/conf.yaml:/app/root/conf.yaml:ro
