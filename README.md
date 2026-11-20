@@ -2,7 +2,7 @@
 
 You need to [intall Docker](https://docs.docker.com/engine/install/) at first to use this repository, as this is a dockerized IBKR Client-Portal Gateway.
 
-When you run docker, the original gateway setup is automatically downloaded from [original IBKR website](https://download2.interactivebrokers.com/portal/clientportal.gw.zip) and automatically used thereafter, so you are guaranteed to be using original IBKR CP gateway.
+When you run docker, the **Client-Portal Gateway** is automatically downloaded from [original IBKR website](https://download2.interactivebrokers.com/portal/clientportal.gw.zip) and automatically used thereafter, so you are guaranteed to be using original IBKR files.
 
 ## Usage
 
