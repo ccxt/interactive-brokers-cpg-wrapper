@@ -6,8 +6,8 @@ When you build the image, the original gateway is automatically downloaded from 
 
 ## Usage
 
-- [download this repo](https://github.com/ccxt/interactive-brokers-cpg-wrapper/archive/refs/heads/master.zip)
-- enter folder and run
+- [Download this repo](https://github.com/ccxt/interactive-brokers-cpg-wrapper/archive/refs/heads/master.zip)
+- Unpack & enter the folder and run:
 ```bash
 docker compose up -d --build
 ```
