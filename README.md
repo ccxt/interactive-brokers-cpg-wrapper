@@ -1,18 +1,20 @@
 # Interactive Brokers Client Portal Gateway
 
-You need to [intall Docker](https://docs.docker.com/engine/install/) at first to use this repository, as this is a dockerized IBKR CP Gateway.
+You need to [intall Docker](https://docs.docker.com/engine/install/) at first to use this repository, as this is a dockerized IBKR Client-Portal Gateway.
 
-When you build the image, the original gateway is automatically downloaded from https://download2.interactivebrokers.com/portal/clientportal.gw.zip, so this repository itsef does not contain any IBKR files to ensure safety.
+When you build the image, the original gateway is automatically downloaded from original IBKR website ([this link](https://download2.interactivebrokers.com/portal/clientportal.gw.zip)), so this repository itsef does not contain any IBKR files to ensure safety.
 
 ## Usage
 
+- [download this repo](https://github.com/ccxt/interactive-brokers-cpg-wrapper/archive/refs/heads/master.zip)
+- enter folder and run
 ```bash
 docker compose up -d --build
 ```
-Then open https://localhost:5000 in your browser and log in with your IBKR credentials
-(the certificate is self-signed, so accept the browser warning). To see logs, use `docker compose logs -f`
+- If port `5000` is already occupied (e.g. you have a macOS & AirPlay), at first change the port mapping in `docker-compose.yml` from `"5000:5000"` to e.g. `"5001:5000"` before starting it.
+- Then open `https://localhost:5000` in your browser and log in with your IBKR credentials (the certificate is self-signed, so accept the browser warning).
 
-You can also ensure it is authorized by running `curl -k https://localhost:5000/v1/api/iserver/auth/status`
+Notes: To see logs, use `docker compose logs -f`.  You can also ensure it is authorized by running `curl -k https://localhost:5000/v1/api/iserver/auth/status`
 
 
 ## Options
