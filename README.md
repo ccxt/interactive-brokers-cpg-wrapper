@@ -7,11 +7,8 @@ When you run docker, the **Client-Portal Gateway** is automatically downloaded f
 ## Usage
 
 - [Download this repo](https://github.com/ccxt/interactive-brokers-cpg-wrapper/archive/refs/heads/master.zip)
-- Unpack & enter the folder and run:
-```bash
-docker compose up -d --build
-```
-- If port `5000` is already occupied (e.g. you have a macOS & AirPlay), at first change the port mapping in `docker-compose.yml` from `"5000:5000"` to e.g. `"5001:5000"` before starting it.
+- Unpack & enter the folder and run: `docker compose up -d --build`
+- If the port `5000` is already occupied (e.g. you have a macOS & AirPlay), at first change the port mapping in `docker-compose.yml` from `"5000:5000"` to e.g. `"5001:5000"` before starting it.
 - Then open `https://localhost:5000` in your browser and log in with your IBKR credentials (the certificate is self-signed, so accept the browser warning).
 
 You can also ensure it is authorized by running `curl -k https://localhost:5000/v1/api/iserver/auth/status`. To see logs, use `docker compose logs -f`.  
